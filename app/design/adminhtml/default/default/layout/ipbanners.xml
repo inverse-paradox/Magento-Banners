@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<layout>
+
+	<ipbanners_admin_adminhtml_group_index>
+		<reference name="head">
+			<action method="setTitle" translate="title" module="ipbanners"><title>Manage Groups</title></action>
+		</reference>
+		<reference name="content">
+			<block type="ipbanners/adminhtml_group" name="groups" />
+		</reference>
+	</ipbanners_admin_adminhtml_group_index>
+
+	<ipbanners_admin_adminhtml_group_edit>
+		<update handle="ipbanners_default" />
+		<reference name="left">
+			<block type="ipbanners/adminhtml_group_edit_tabs" name="group.tabs" />
+		</reference>
+		<reference name="content">
+			<block type="ipbanners/adminhtml_group_edit" name="groups" />
+		</reference>
+	</ipbanners_admin_adminhtml_group_edit>
+
+	<ipbanners_admin_adminhtml_banner_index>
+		<reference name="head">
+			<action method="setTitle" translate="title" module="ipbanners"><title>Manage Banners</title></action>
+		</reference>
+		<reference name="content">
+			<block type="ipbanners/adminhtml_banner" name="banner" />
+		</reference>
+	</ipbanners_admin_adminhtml_banner_index>
+
+	<ipbanners_admin_adminhtml_banner_edit>
+		<update handle="ipbanners_default" />
+		<reference name="left">
+			<block type="ipbanners/adminhtml_banner_edit_tabs" name="banners.tabs" />
+		</reference>
+		<reference name="content">
+			<block type="ipbanners/adminhtml_banner_edit" name="banners" />
+		</reference>
+	</ipbanners_admin_adminhtml_banner_edit>
+
+</layout>

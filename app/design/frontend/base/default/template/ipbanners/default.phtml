@@ -1,0 +1,22 @@
+<div class="block block-ipbanners">
+
+<?php
+if ($this->hasValidGroup()):
+    $count = 0;
+    $max = $this->getGroup()->getBannerCount();
+?>
+
+<ul>
+
+<?php foreach ($this->getBanners() as $banner):
+    $count++;
+    $class = '';
+    if ($count == 1) $class .= ' first';
+    if ($count == $max) $class .= ' last';
+?>
+        <li class="<?php echo $class; ?>"><a href="<?php echo $banner->getUrl(); ?>"><?php echo $banner->getTitle(); ?></a></li>
+    <?php endforeach; ?>
+</ul>
+<?php endif; ?>
+
+</duv>

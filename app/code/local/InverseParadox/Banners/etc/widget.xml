@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<widgets>
+    <ipbanners_view type="ipbanners/view" module="ipbanners">
+        <name>Banner Block</name>
+        <description type="desc">Display contents of a banner group</description>
+        <parameters>
+            <group_code translate="label">
+                <required>1</required>
+                <visible>1</visible>
+                <label>Banner Group</label>
+                <type>select</type>
+                <source_model>ipbanners/groups</source_model>
+            </group_code>
+            <template>
+                <required>0</required>
+                <visible>1</visible>
+                <label>Template</label>
+                <type>select</type>
+                <values>
+                    <default translate="label">
+                        <value>ipbanners/default.phtml</value>
+                        <label>Default</label>
+                    </default>
+                    <categories translate="label">
+                        <value>ipbanners/categories.phtml</value>
+                        <label>Categories</label>
+                    </categories>
+                    <brands translate="label">
+                        <value>ipbanners/brands.phtml</value>
+                        <label>Brands</label>
+                    </brands>
+                    <hero translate="label">
+                        <value>ipbanners/hero.phtml</value>
+                        <label>Hero</label>
+                    </hero>
+                </values>
+            </template>
+        </parameters>
+    </ipbanners_view>
+</widgets>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<config>
+	<menu>
+		<cms>
+			<children>
+				<ipbanners translate="title" module="ipbanners">
+					<title>Banner Manager</title>
+					<sort_order>22</sort_order>
+					<action>ipbanners_admin/adminhtml_group</action>
+				</ipbanners>
+			</children>
+		</cms>
+	</menu>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+					<cms>
+						<children>
+							<ipbanners translate="title" module="ipbanners">
+								<title>Banner Manager</title>
+								<sort_order>120</sort_order>
+								<children>
+									<group translate="title">
+										<title>Manage Groups</title>
+										<sort_order>6</sort_order>
+									</group>
+									<banner translate="title">
+										<title>Manage Banners</title>
+										<sort_order>11</sort_order>
+									</banner>
+								</children>
+							</ipbanners>
+						</children>
+					</cms>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>
