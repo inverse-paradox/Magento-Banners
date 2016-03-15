@@ -66,7 +66,7 @@ class InverseParadox_Banners_Block_Adminhtml_Group_Edit_Tab_Banners extends Mage
 					array(
 						'caption' => Mage::helper('catalog')->__('Edit'),
 						'url'     => array(
-							'base' => '*/adminhtml_banner/edit',
+							'base' => 'adminhtml/ipbanners_banner/edit',
 						),
 						'field'   => 'id',
 					)

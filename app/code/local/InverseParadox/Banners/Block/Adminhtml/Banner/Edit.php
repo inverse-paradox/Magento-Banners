@@ -35,9 +35,9 @@ class InverseParadox_Banners_Block_Adminhtml_Banner_Edit  extends Mage_Adminhtml
     {
     	if ($this->getRequest()->getParam($this->_objectId)) {
 			$group_id = Mage::getModel('ipbanners/banner')->load($this->getRequest()->getParam($this->_objectId))->getGroupId();
-			return $this->getUrl('*/adminhtml_group/edit/', array('id' => $group_id));
+			return $this->getUrl('adminhtml/ipbanners_group/edit/', array('id' => $group_id));
 		} else {
-        	return $this->getUrl('*/adminhtml_group/');
+        	return $this->getUrl('adminhtml/ipbanners_group/');
         }
     }
 

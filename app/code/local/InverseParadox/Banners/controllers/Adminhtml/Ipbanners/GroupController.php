@@ -1,6 +1,6 @@
 <?php
 
-class InverseParadox_Banners_Adminhtml_GroupController extends Mage_Adminhtml_Controller_Action
+class InverseParadox_Banners_Adminhtml_Ipbanners_GroupController extends Mage_Adminhtml_Controller_Action
 {
 	public function indexAction()
 	{
@@ -159,4 +159,9 @@ class InverseParadox_Banners_Adminhtml_GroupController extends Mage_Adminhtml_Co
 
 		return Mage::registry('ipbanners_group');
 	}
+
+	protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('cms/ipbanners/group');
+    }
 }

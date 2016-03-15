@@ -1,6 +1,6 @@
 <?php
 
-class InverseParadox_Banners_Adminhtml_BannerController extends Mage_Adminhtml_Controller_Action
+class InverseParadox_Banners_Adminhtml_Ipbanners_BannerController extends Mage_Adminhtml_Controller_Action
 {
 	public function indexAction()
 	{
@@ -85,7 +85,7 @@ class InverseParadox_Banners_Adminhtml_BannerController extends Mage_Adminhtml_C
 			$this->_getSession()->addError($this->__('There was no data to save'));
 		}
 
-		$this->_redirect('*/adminhtml_group/edit', array('id' => $banner->getGroupId()));
+		$this->_redirect('adminhtml/ipbanners_group/edit', array('id' => $banner->getGroupId()));
 	}
 
 	/**
@@ -135,7 +135,7 @@ class InverseParadox_Banners_Adminhtml_BannerController extends Mage_Adminhtml_C
 			}
 		}
 
-		$this->_redirect('*/adminhtml_group/edit', array('id' => $bannerId));
+		$this->_redirect('adminhtml/ipbanners_group/edit', array('id' => $bannerId));
 	}
 
 	/**
@@ -188,4 +188,9 @@ class InverseParadox_Banners_Adminhtml_BannerController extends Mage_Adminhtml_C
 
 		return Mage::registry('ipbanners_banner');
 	}
+
+	protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('cms/ipbanners/banner');
+    }
 }

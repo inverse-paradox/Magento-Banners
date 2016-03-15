@@ -2,7 +2,7 @@
 <config>
 	<modules>
 		<InverseParadox_Banners>
-			<version>0.1.0</version>
+			<version>0.2.0</version>
 		</InverseParadox_Banners>
 	</modules>
 	<global>
@@ -65,13 +65,13 @@
 	</frontend>
 	<admin>
 		<routers>
-			<ipbanners_admin>
-				<use>admin</use>
+			<adminhtml>
 				<args>
-					<module>InverseParadox_Banners</module>
-					<frontName>admin_ipbanners</frontName>
+					<modules>
+						<InverseParadox_Banners after="Mage_Adminhtml">InverseParadox_Banners_Adminhtml</InverseParadox_Banners>
+					</modules>
 				</args>
-			</ipbanners_admin>
+			</adminhtml>
 		</routers>
 	</admin>
 	<adminhtml>
